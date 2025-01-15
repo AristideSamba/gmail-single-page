@@ -95,3 +95,47 @@ header nav ul .create-account-button:hover{
   font-size: 1.6rem;
   cursor: pointer;
 }
+/* Section form */
+.section-form{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.section-form h2{
+  width: 300px;
+  font-size: 2.3rem;
+  font-weight: 300;
+  text-align: center;
+}
+.section-form p{
+  width: 350px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+/* form */
+.section-form form{
+  width: 600px;
+}
+.section-form form fieldset{
+  border-radius: 5px;
+}
+.section-form form legend{
+  font-size: 2.3rem;
+  font-weight: 300;
+}
+.section-form form label{
+  font-size: 1.3rem;
+}
+.section-form form input{
+  width: 95%;
+  height: 30px;
+  background-color: #F8F5F5;
+  border: solid 1px #d1d0d0 ;
+  border-radius: 5px;
+}
+.section-form form button{
+  background-color: #1A73E8;
+  color: #ffff;
+}
