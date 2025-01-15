@@ -20,6 +20,7 @@ body {
     grid-template-rows: auto 1fr auto;
     min-height: 100svh;
     background-color: #F5F5F5;
+    overflow: hidden;
 }
 
 ol, ul {

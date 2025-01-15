@@ -1,1 +1,79 @@
 @import url(./reset.css);
+
+:root{
+  --jasper: #dd5347ff;
+  --seasalt: #fafafaff;
+}
+
+/* My header */
+header{
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header figure{
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+header figure img{
+  width: 100%;
+}
+header h1{
+  font-size: 2.3rem;
+  margin-left: 10px;
+  color: #62666B;
+  font-weight: 400;
+}
+header nav{
+  position: absolute;
+  right: 0;
+}
+header nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+header nav ul li a{
+  font-size: 1.6rem;
+}
+header nav ul .create-account-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--jasper);
+  color: #ffff;
+}
+/* Section home */
+.section-home{
+  margin: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../asset/image-accueil2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.section-home p{
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  font-size: 3rem;
+  color: #ffff;
+}
+.section-home button{
+  position: absolute;
+  top: 48%;
+  left: 5%;
+  width: 200px;
+  height: 50px;
+  background-color: var(--jasper);
+  color: #ffff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
