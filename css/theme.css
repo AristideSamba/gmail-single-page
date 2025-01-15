@@ -11,6 +11,7 @@ header{
   position: relative;
   display: flex;
   align-items: center;
+  box-shadow: 0 2px 6px #0000001f,inset 0 -1px #dadce0;
 }
 header figure{
   width: 30px;
@@ -34,11 +35,23 @@ header nav ul{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
 }
-header nav ul li a{
+header nav ul li{
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.6rem;
+  transition: .3s ease-in-out;
+
 }
+header nav ul li:hover{
+  background-color:#d7e7ff;
+  transition: .3s ease-in-out;
+  border-radius: 5px;
+}
+
 header nav ul .create-account-button{
   display: flex;
   align-items: center;
@@ -47,6 +60,9 @@ header nav ul .create-account-button{
   height: 50px;
   background-color: var(--jasper);
   color: #ffff;
+}
+header nav ul .create-account-button:hover{
+  background-color: var(--jasper);
 }
 /* Section home */
 .section-home{
@@ -67,13 +83,15 @@ header nav ul .create-account-button{
 }
 .section-home button{
   position: absolute;
-  top: 48%;
+  top: 46%;
   left: 5%;
   width: 200px;
   height: 50px;
   background-color: var(--jasper);
   color: #ffff;
   border: none;
+  border-radius: 5px;
   text-transform: uppercase;
   font-size: 1.6rem;
+  cursor: pointer;
 }
