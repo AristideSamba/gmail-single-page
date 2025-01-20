@@ -99,6 +99,23 @@ header nav ul .create-account-button:hover{
   font-size: 1.6rem;
   cursor: pointer;
 }
+.section-home figure{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  position: fixed;
+  right: 3%;
+  bottom: 5%;
+  background-color: var(--jasper);
+  cursor: pointer;
+}
+.section-home figure img{
+  position: absolute; /* Important pour le positionnement */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+}
 /* Section form */
 .section-form{
   padding-top: 60px;
