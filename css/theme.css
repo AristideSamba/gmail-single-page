@@ -8,8 +8,13 @@
 /* My header */
 header{
   height: 50px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
+  background-color: #ffff;
   align-items: center;
   box-shadow: 0 2px 6px #0000001f,inset 0 -1px #dadce0;
 }
@@ -47,9 +52,8 @@ header nav ul li{
 
 }
 header nav ul li:hover{
-  background-color:#d7e7ff;
   transition: .3s ease-in-out;
-  border-radius: 5px;
+  color: #dd5347;
 }
 
 header nav ul .create-account-button{
@@ -62,29 +66,29 @@ header nav ul .create-account-button{
   color: #ffff;
 }
 header nav ul .create-account-button:hover{
-  background-color: var(--jasper);
+  color: #ffff;
 }
 /* Section home */
 .section-home{
-  margin: 0;
+  margin-top: 50px;
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  background-image: url(../asset/image-accueil2.jpg);
+  height: 100vh;
+  background-image: url(../asset/home-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .section-home p{
   position: absolute;
-  top: 15%;
-  left: 5%;
+  top: 17%;
+  left: 8%;
   font-size: 3rem;
   color: #ffff;
 }
 .section-home button{
   position: absolute;
   top: 46%;
-  left: 5%;
+  left: 8%;
   width: 200px;
   height: 50px;
   background-color: var(--jasper);
@@ -97,7 +101,8 @@ header nav ul .create-account-button:hover{
 }
 /* Section form */
 .section-form{
-  margin-top: 20px;
+  padding-top: 60px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,6 +122,7 @@ header nav ul .create-account-button:hover{
 /* form */
 .section-form form{
   width: 600px;
+  margin-bottom: 20px;
 }
 .section-form form fieldset{
   border-radius: 5px;
@@ -136,6 +142,13 @@ header nav ul .create-account-button:hover{
   border-radius: 5px;
 }
 .section-form form button{
+  margin-left: 27%;
+  margin-right: 27%;
+  margin-top: 10px;
   background-color: #1A73E8;
+  width: 250px;
+  height: 40px;
   color: #ffff;
+  border: none;
+  border-radius: 2px;
 }
