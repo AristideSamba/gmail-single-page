@@ -1,0 +1,12 @@
+@import url(./theme.css);
+
+body{
+  overflow: hidden;
+}
+
+.section-form {
+  padding-top: 80px;
+}
+.section-form h2{
+  width: 600px;
+}

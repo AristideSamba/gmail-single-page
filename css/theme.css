@@ -28,7 +28,7 @@ header figure img{
 }
 header h1{
   font-size: 2.3rem;
-  margin-left: 10px;
+  margin-left: 5px;
   color: #62666B;
   font-weight: 400;
 }
@@ -83,6 +83,7 @@ header nav ul .create-account-button:hover{
   top: 17%;
   left: 8%;
   font-size: 3rem;
+  font-weight: 300;
   color: #ffff;
 }
 .section-home button{
@@ -99,6 +100,8 @@ header nav ul .create-account-button:hover{
   font-size: 1.6rem;
   cursor: pointer;
 }
+
+/* Down arrow */
 .section-home figure{
   width: 40px;
   height: 40px;
@@ -108,6 +111,7 @@ header nav ul .create-account-button:hover{
   bottom: 5%;
   background-color: var(--jasper);
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .section-home figure img{
   position: absolute; /* Important pour le positionnement */
@@ -115,6 +119,9 @@ header nav ul .create-account-button:hover{
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
+}
+.section-home figure:hover{
+  transform: scale(1.1);
 }
 /* Section form */
 .section-form{
@@ -168,4 +175,5 @@ header nav ul .create-account-button:hover{
   color: #ffff;
   border: none;
   border-radius: 2px;
+  cursor: pointer;
 }
