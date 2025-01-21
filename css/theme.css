@@ -86,10 +86,13 @@ header nav ul .create-account-button:hover{
   font-weight: 300;
   color: #ffff;
 }
-.section-home button{
+.section-home .boutton{
   position: absolute;
   top: 46%;
   left: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 50px;
   background-color: var(--jasper);
