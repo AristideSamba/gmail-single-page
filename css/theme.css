@@ -137,29 +137,32 @@ header nav ul .create-account-button:hover{
 }
 .section-form h2{
   width: 300px;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
 }
 .section-form p{
-  width: 350px;
-  font-size: 1.3rem;
+  width: 450px;
+  font-size: 1.7rem;
   text-align: center;
 }
 /* form */
 .section-form form{
-  width: 600px;
+  width: 700px;
   margin-bottom: 20px;
 }
 .section-form form fieldset{
   border-radius: 5px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .section-form form legend{
   font-size: 2.3rem;
   font-weight: 300;
 }
 .section-form form label{
-  font-size: 1.3rem;
+  font-size: 1.7rem;
 }
 .section-form form input{
   width: 95%;
@@ -171,12 +174,15 @@ header nav ul .create-account-button:hover{
 .section-form form button{
   margin-left: 27%;
   margin-right: 27%;
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: #1A73E8;
-  width: 250px;
+  font-size: 1.6rem;
   height: 40px;
   color: #ffff;
   border: none;
   border-radius: 2px;
   cursor: pointer;
+}
+.section-form form input{
+  font-size: 1.7rem;
 }
