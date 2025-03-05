@@ -11,7 +11,7 @@ if(isset($_POST["submit"])){
   include "../classes/signup.classes.php";
   include "../classes/signup-contr.classes.php";
 
-  $signup = new SignupContr($nom, $prenom, $email, $pwd)
+  $signup = new SignupContr($nom, $prenom, $email, $pwd);
   //Gestion des erreures pour le le user signup
 
   //Retourner à la page d'accueil
