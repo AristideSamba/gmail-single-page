@@ -1,3 +1,7 @@
+<?php
+include_once __DIR__."/controller/baseControleur.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,8 +26,8 @@
     <nav>
       <ul>
         <li><a href="#">POUR LES PROS</a></li>
-        <li><a href="connexion.html">CONNEXION</a></li>
-        <li class="create-account-button"><a href="#">CREER UN COMPTE</a></li>
+        <li><a href="connexion.php">CONNEXION</a></li>
+        <li class="create-account-button"><a href="#form-down">CREER UN COMPTE</a></li>
       </ul>
     </nav>
   </header>
@@ -44,7 +48,7 @@
     <section class="section-form" id="form-down">
       <h2>Une boite de réception entièrement repensée</h2>
       <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaiter lire en priorité</p>
-      <form action="" method="post">
+      <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST">
         <fieldset>
           <legend>Créer un compte</legend>
           <label for="nom">Nom *</label><br>

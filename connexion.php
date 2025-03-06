@@ -15,15 +15,15 @@
   <!-- header of my page -->
   <header>
     <figure>
-      <a href="./index.html"><img src="./asset/mail.png" alt="Gmail logo" title="Google Gmail"></a>
+      <a href="./index.php"><img src="./asset/mail.png" alt="Gmail logo" title="Google Gmail"></a>
       <figcaption hidden>Logo Gmail</figcaption>
     </figure>
-    <h1><a href="./index.html">Gmail</a></h1>
+    <h1><a href="./index.php">Gmail</a></h1>
     <nav>
       <ul>
         <li><a href="#">POUR LES PROS</a></li>
         <li class="create-account-button"><a href="#">CONNEXION</a></li>
-        <li><a href="./index.html">CREER UN COMPTE</a></li>
+        <li><a href="./index.php#form-down">CREER UN COMPTE</a></li>
       </ul>
     </nav>
   </header>

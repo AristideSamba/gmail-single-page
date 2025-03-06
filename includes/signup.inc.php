@@ -1,18 +1,12 @@
 <?php
-
-if(isset($_POST["submit"])){
-  //Récupérer les données
-  $nom = $_POST["nom"];
-  $prenom = $_POST["prenom"];
-  $email = $_POST["email"];
-  $pwd = $_POST["pwd"];
-
-  //Instanciation de la classe SIgnupContr
-  include "../classes/signup.classes.php";
-  include "../classes/signup-contr.classes.php";
-
-  $signup = new SignupContr($nom, $prenom, $email, $pwd);
-  //Gestion des erreures pour le le user signup
-
-  //Retourner à la page d'accueil
+$servername = "localhost";
+$username = "root";
+$password = "";
+try{
+  $pdo = new PDO("mysql:host=$servername;dbname=gmail", $username, $password);
+  # Définir le mode d'erreur PDO sur exception
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e){
+  echo "Erreur!: " . $e->getMessage();
 }
