@@ -1,6 +1,6 @@
 <?php
 
-session_start(); 
+session_start();
 
 include_once './includes/signup.inc.php';
 
@@ -13,26 +13,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($nom && $prenom && $email && $pwd) {
 
-        $hashedPassword = password_hash($pwd, PASSWORD_DEFAULT);
+        // Vérifier si l'email existe déjà
+        $stmtCheck = $pdo->prepare('SELECT COUNT(*) FROM users WHERE email = :email');
+        $stmtCheck->execute([':email' => $email]);
+        $count = $stmtCheck->fetchColumn();
 
+        if ($count > 0) {
+            $error = 'Cet email est déjà enregistré.';
+        } else {
+            // L'email n'existe pas, procéder à l'insertion
+            $hashedPassword = password_hash($pwd, PASSWORD_DEFAULT);
 
-        $_SESSION['nom'] = $nom;
-        $_SESSION['prenom'] = $prenom;
-        setcookie('email', $email, time() + 3600, '/', '', true, true); # one hours
+            $_SESSION['nom'] = $nom;
+            $_SESSION['prenom'] = $prenom;
+            setcookie('email', $email, time() + 3600, '/', '', true, true); # one hours
 
-        # Insert data into the database prepare method
-        $stmt = $pdo->prepare('INSERT INTO users (nom, prenom, email, pwd) VALUES (:nom, :prenom, :email, :pwd)');
-        $stmt->execute([
-            ':nom' => $nom,
-            ':prenom' => $prenom,
-            ':email' => $email,
-            ':pwd' => $hashedPassword,
-        ]);
+            $stmt = $pdo->prepare('INSERT INTO users (nom, prenom, email, pwd) VALUES (:nom, :prenom, :email, :pwd)');
+            $stmt->execute([
+                ':nom' => $nom,
+                ':prenom' => $prenom,
+                ':email' => $email,
+                ':pwd' => $hashedPassword,
+            ]);
 
-       # Redirect to the display page
-        header('Location: ./connexion.php');
-        exit;
+            header('Location: index.php');
+            exit;
+        }
     } else {
         $error = 'Champs vides!!';
     }
 }
+?>

@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__."/controller/baseControleur.php";
+include_once __DIR__."./controller/baseControleur.php";
 ?>
 
 <!DOCTYPE html>
